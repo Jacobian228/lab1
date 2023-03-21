@@ -23,99 +23,128 @@ img{
 </head>
 <body>
 <script>
+    function submit(){
+        var x=0
+        var array = []
+        var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+        for (var i = 0; i < checkboxes.length; i++) {
+            array.push(parseInt(checkboxes[i].value))
+        }
+        array.forEach(item => x+=item)
+        switch (x){
+            case 0:
+                document.getElementById('result').innerHTML = 'Результат: (0/6)'
+                break
+            case 1:
+                document.getElementById('result').innerHTML = 'Результат: (1/6)'
+                break
+            case 2:
+                document.getElementById('result').innerHTML = 'Результат: (2/6)'
+                break
+            case 3:
+                document.getElementById('result').innerHTML = 'Результат: (3/6)'
+                break
+            case 4:
+                document.getElementById('result').innerHTML = 'Результат: (4/6)'
+                break
+            case 5:
+                document.getElementById('result').innerHTML = 'Результат: (5/6)'
+                break
+            case 6:
+                document.getElementById('result').innerHTML = 'Результат: Шумахер (6/6)'
+                break
+            default:
+                document.getElementById('result').innerHTML = 'Результат:' + x
+                break
+        }
+    }
+    </script>
+<script>
     function onlyOne(checkbox) {
         var checkboxes = document.getElementsByName(checkbox.name)
         checkboxes.forEach((item) => {if (item !== checkbox) item.checked = false})
     }
-    function submit(){
-        var array = []
-        var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-        for (var i = 0; i < checkboxes.length; i++) {
-            array.push(checkboxes[i].value)
-        }
-    }
 </script>
+
 <h1>Тест ПДД</h1>
 
-<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+<p>Внимательно прочитайте вопросы с картинок и выберите единственный правильный вариант ответа.</p>
 
-<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+<p>Вопросы к которым не дан ответ, будут считаться нерешенными.</p>
 
 <div class="grid-container">
     <div class="grid-item">
         <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
         <a>
             <label>А</label>
-            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)" value=1/>
             <label>Б</label>
-            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)" value=0/>
             <label>В</label>
-            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)" value=0/>
         </a>
     </div>
    <div class="grid-item">
         <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
         <a>
             <label>А</label>
-            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)" value=0/>
             <label>Б</label>
-            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)" value=1/>
             <label>В</label>
-            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)" value=0/>
         </a>
     </div>
     <div class="grid-item">
         <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
         <a>
             <label>А</label>
-            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)" value=0/>
             <label>Б</label>
-            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)" value=0/>
             <label>В</label>
-            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)" value=1/>
         </a>
     </div>
     <div class="grid-item">
         <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
         <a>
             <label>А</label>
-            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)" value=1/>
             <label>Б</label>
-            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)" value=0/>
             <label>В</label>
-            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)" value=0/>
         </a>
     </div>
     <div class="grid-item">
         <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
         <a>
             <label>А</label>
-            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)" value=0/>
             <label>Б</label>
-            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)" value=1/>
             <label>В</label>
-            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)" value=0/>
         </a>
     </div>
     <div class="grid-item">
         <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
         <a>
             <label>А</label>
-            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)" value=0/>
             <label>Б</label>
-            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)" value=0/>
             <label>В</label>
-            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)"/>
+            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)" value=1/>
         </a>
     </div>
 </div>
 
-<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
-<button type="button" onclick="submit()">Ответить</button></div> 
+<p>Если вы уверенны в своих ответах, нажмите на кнопку "Ответить".</p>
+<button type="button" onclick="submit()">Ответить</button>
     <br>
-    <br>
-    <br>
-    <br>
+<p id="result">Результат:</p>
 </body>
 </html>
 
