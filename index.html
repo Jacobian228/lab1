@@ -22,78 +22,87 @@ img{
 </style>
 </head>
 <body>
-
-<h1>Grid Elements</h1>
+<script>
+  function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName(checkbox.name)
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+</script>
+<h1>Тест ПДД</h1>
 
 <p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
 
 <p>Direct child element(s) of the grid container automatically becomes grid items.</p>
 
 <div class="grid-container">
-  <div class="grid-item">
-      <a>
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  </div>
-  <div class="grid-item">
-    <a>
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>
-  <div class="grid-item">
-    <a >
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>  
-  <div class="grid-item">
-    <a >
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>
-  <div class="grid-item">
-    <a >
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>
-  <div class="grid-item">
-    <a>
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>  
-  <div class="grid-item">
-    <a>
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>
-  <div class="grid-item">
-    <a>
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>
-  <div class="grid-item">
-    <a >
-			<img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
-		</a><br>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button>
-  <button type="button" onclick="func()">Каки</button></div>  
+    <div class="grid-item">
+        <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
+        <a>
+            <label>А</label>
+            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)"/>
+            <label>Б</label>
+            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)"/>
+            <label>В</label>
+            <input type="checkbox" id="cooking" name="f1" onclick="onlyOne(this)"/>
+        </a>
+    </div>
+   <div class="grid-item">
+        <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
+        <a>
+            <label>А</label>
+            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)"/>
+            <label>Б</label>
+            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)"/>
+            <label>В</label>
+            <input type="checkbox" id="cooking" name="f2" onclick="onlyOne(this)"/>
+        </a>
+    </div>
+    <div class="grid-item">
+        <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
+        <a>
+            <label>А</label>
+            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)"/>
+            <label>Б</label>
+            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)"/>
+            <label>В</label>
+            <input type="checkbox" id="cooking" name="f3" onclick="onlyOne(this)"/>
+        </a>
+    </div>
+    <div class="grid-item">
+        <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
+        <a>
+            <label>А</label>
+            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)"/>
+            <label>Б</label>
+            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)"/>
+            <label>В</label>
+            <input type="checkbox" id="cooking" name="f4" onclick="onlyOne(this)"/>
+        </a>
+    </div>
+    <div class="grid-item">
+        <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
+        <a>
+            <label>А</label>
+            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)"/>
+            <label>Б</label>
+            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)"/>
+            <label>В</label>
+            <input type="checkbox" id="cooking" name="f5" onclick="onlyOne(this)"/>
+        </a>
+    </div>
+    <div class="grid-item">
+        <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
+        <a>
+            <label>А</label>
+            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)"/>
+            <label>Б</label>
+            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)"/>
+            <label>В</label>
+            <input type="checkbox" id="cooking" name="f6" onclick="onlyOne(this)"/>
+        </a>
+    </div>
 </div>
 
 <p>Direct child element(s) of the grid container automatically becomes grid items.</p>
